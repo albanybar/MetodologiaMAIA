@@ -1,0 +1,23 @@
+
+Fase 1: Coleta de informação
+
+
+```jsx
+
+root@kali:~# netdiscover -r 172.16.116.0/24
+
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                                                                              
+                                                                                                                                                                                            
+ 4 Captured ARP Req/Rep packets, from 4 hosts.   Total size: 240                                                                                                                            
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 172.16.116.1    00:50:56:c0:00:08      1      60  VMware, Inc.                                                                                                                             
+ 172.16.116.2    00:50:56:f9:18:06      1      60  VMware, Inc.                                                                                                                             
+ 172.16.116.128  00:0c:29:1a:79:bd      1      60  VMware, Inc.                                                                                                                             
+ 172.16.116.254  00:50:56:e4:11:09      1      60  VMware, Inc.                                                                                                                             
+
+
+```
+
+
