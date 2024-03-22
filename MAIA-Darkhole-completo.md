@@ -257,3 +257,104 @@ Updated 14 paths from the index
 ┌──(root㉿kali)-[/home/kali/git-dumper]
 └─# cd backup    
 ```
+
+Consultando os logs do git:
+
+
+```jsx
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali/git-dumper]
+└─# cd backup    
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali/git-dumper/backup]
+└─# git log                                             
+commit 0f1d821f48a9cf662f285457a5ce9af6b9feb2c4 (HEAD -> master)
+Author: Jehad Alqurashi <anmar-v7@hotmail.com>
+Date:   Mon Aug 30 13:14:32 2021 +0300
+
+    i changed login.php file for more secure
+
+commit a4d900a8d85e8938d3601f3cef113ee293028e10
+Author: Jehad Alqurashi <anmar-v7@hotmail.com>
+Date:   Mon Aug 30 13:06:20 2021 +0300
+
+    I added login.php file with default credentials
+
+commit aa2a5f3aa15bb402f2b90a07d86af57436d64917
+Author: Jehad Alqurashi <anmar-v7@hotmail.com>
+Date:   Mon Aug 30 13:02:44 2021 +0300
+
+    First Initialize
+                                              
+
+```
+
+Log expondo as credencias de acesso do portal interno:
+
+
+```jsx
+┌──(root㉿kali)-[/home/kali/git-dumper/backup]
+└─# git show 0f1d821f48a9cf662f285457a5ce9af6b9feb2c4
+commit 0f1d821f48a9cf662f285457a5ce9af6b9feb2c4 (HEAD -> master)
+Author: Jehad Alqurashi <anmar-v7@hotmail.com>
+Date:   Mon Aug 30 13:14:32 2021 +0300
+
+    i changed login.php file for more secure
+
+diff --git a/login.php b/login.php
+index 8a0ff67..0904b19 100644
+--- a/login.php
++++ b/login.php
+@@ -2,7 +2,10 @@
+ session_start();
+ require 'config/config.php';
+ if($_SERVER['REQUEST_METHOD'] == 'POST'){
+-    if($_POST['email'] == "lush@admin.com" && $_POST['password'] == "321"){
++    $email = mysqli_real_escape_string($connect,htmlspecialchars($_POST['email']));
++    $pass = mysqli_real_escape_string($connect,htmlspecialchars($_POST['password']));
++    $check = $connect->query("select * from users where email='$email' and password='$pass' and id=1");
++    if($check->num_rows){
+         $_SESSION['userid'] = 1;
+         header("location:dashboard.php");
+         die();
+                                                                                                                                                                                             
+┌──(root㉿kali)-[/home/kali/git-dumper/backup]
+└─# git show a4d900a8d85e8938d3601f3cef113ee293028e10 
+commit a4d900a8d85e8938d3601f3cef113ee293028e10
+Author: Jehad Alqurashi <anmar-v7@hotmail.com>
+Date:   Mon Aug 30 13:06:20 2021 +0300
+
+    I added login.php file with default credentials
+
+diff --git a/login.php b/login.php
+index e69de29..8a0ff67 100644
+--- a/login.php
++++ b/login.php
+@@ -0,0 +1,42 @@
++<?php
++session_start();
++require 'config/config.php';
++if($_SERVER['REQUEST_METHOD'] == 'POST'){
++    if($_POST['email'] == "lush@admin.com" && $_POST['password'] == "321"){
++        $_SESSION['userid'] = 1;
++        header("location:dashboard.php");
++        die();
++    }
++
++}
++?>
++
++<link rel="stylesheet" href="style/login.css">
++<head>
++    <script src="https://kit.fontawesome.com/fe909495a1.js" crossorigin="anonymous"></script>
++    <link rel="stylesheet" href="Project_1.css">
++    <title>Home</title>
++</head>
++
++<body>
++
++<div class="container">
++    <h1>👋 Welcome</h1>
++    <!-- <a href="file:///C:/Users/SAURABH%20SINGH/Desktop/HTML5/PROJECTS/Project%201/Project_1.html"><h1>Sign In</h1></a> -->
++    <!-- <a href="file:///C:/Users/SAURABH%20SINGH/Desktop/HTML5/PROJECTS/Project%201/P2.html">  <h1>Log In</h1></a> -->
+```
