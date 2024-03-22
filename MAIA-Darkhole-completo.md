@@ -20,6 +20,7 @@ root@kali:~# netdiscover -r 172.16.116.0/24
 
 
 ```
+Fase 2: Enumeração
 
 Uso do nmap para identificação das portas abertas e com a opção -A scripts de enumeração e com isso foi identificado a pasta .git
 
@@ -358,3 +359,6 @@ index e69de29..8a0ff67 100644
 +    <!-- <a href="file:///C:/Users/SAURABH%20SINGH/Desktop/HTML5/PROJECTS/Project%201/Project_1.html"><h1>Sign In</h1></a> -->
 +    <!-- <a href="file:///C:/Users/SAURABH%20SINGH/Desktop/HTML5/PROJECTS/Project%201/P2.html">  <h1>Log In</h1></a> -->
 ```
+Fase 3: Exploração
+
+Nesse caso a exploração foi realizada com acesso ao portal interno usando a credencial encontrada nos logs.
