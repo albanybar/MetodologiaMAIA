@@ -186,6 +186,7 @@ Uso do Nikto como escanner de vulnerabilidade
 + 1 host(s) tested
 
 ```
+Fase 3: Exploração
 
 Após a identificação do exploit público a ser usado foi utilizado o Metasploit como a execução
 
