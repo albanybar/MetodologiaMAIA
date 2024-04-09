@@ -1,6 +1,6 @@
 # Repositório de Estudos de Caso e Checklist da Metodologia MAIA
 
-Bem-vindo ao repositório de estudos de caso em laboratório e checklist da metodologia MAIA (Metodologia de Avaliação de Inseguranças Ativas). Este repositório contém materiais relacionados aos estudos de caso realizados em ambientes de laboratório, utilizando a metodologia MAIA para avaliação de vulnerabilidades em sistemas de computadores.
+Bem-vindo ao repositório de estudos de caso em laboratório e checklist da metodologia MAIA (Metodologia de Avaliação de Inseguranças Ativas). Este repositório contérá materiais relacionados aos estudos de caso realizados em ambientes de laboratório, utilizando a metodologia MAIA para avaliação de vulnerabilidades em sistemas de computadores.
 
 ## Estudos de Caso em Laboratório
 Os estudos de caso em laboratório incluem a execução da metodologia MAIA em ambientes controlados, como máquinas virtuais disponíveis em plataformas como VulnHub. Nesses estudos, são realizadas as etapas da metodologia, desde a coleta de informações até a exploração, com o objetivo de identificar possíveis falhas de segurança e propor medidas de correção.
